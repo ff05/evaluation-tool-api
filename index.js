@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const { groups } = require('./routes')
+const { groups, students } = require('./routes')
 
 const PORT = process.env.PORT || 3030
 
@@ -11,6 +11,7 @@ app
   .use(bodyParser.json())
 
   .use(groups)
+  .use(students)
 
   .use((req, res, next) => {
      const err = new Error('Not Found')
