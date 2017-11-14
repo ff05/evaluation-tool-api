@@ -22,14 +22,16 @@ router
       .catch((error) => next(error))
   })
 
-  .post('/students', passport.authorize('jwt', { session: false }), (req, res, next) => {
+  .post('/students', (req, res, next) => {
     let newStudent = req.body
+    newStudent.authorId = req.account._id
+
     Student.create(newStudent)
       .then((student) => res.json(student))
       .catch((error) => next(error))
   })
 
-  .patch('/students/:id', authenticate, (req, res, next) => {
+  .patch('/students/:id', (req, res, next) => {
     const id = req.params.id
     const patchForStudent = req.body
 
@@ -46,7 +48,7 @@ router
       .catch((error) => next(error))
   })
 
-  .delete('/students/:id', authenticate, (req, res, next) => {
+  .delete('/students/:id', (req, res, next) => {
     const id = req.params.id
     Student.findByIdAndRemove(id)
       .then(() => {

@@ -20,8 +20,10 @@ router
       })
       .catch((error) => next(error))
   })
-  .post('/groups', passport.authorize('jwt', { session: false }), (req, res, next) => {
+  .post('/groups', (req, res, next) => {
     let newGroup = req.body
+    newGroup.authorId = req.account._id
+
     Group.create(newGroup)
       .then((group) => res.json(group))
       .catch((error) => next(error))
