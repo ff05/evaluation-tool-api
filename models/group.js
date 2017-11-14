@@ -1,5 +1,5 @@
 const mongoose = require('../config/database')
-const { Schema }  = mongoose
+const { Schema } = mongoose
 const studentSchema = require('mongoose').model('students').schema
 
 const groupSchema = new Schema({

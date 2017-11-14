@@ -1,5 +1,8 @@
 const router = require('express').Router()
+const passport = require('../config/auth')
 const { Group } = require('../models')
+
+const authenticate = passport.authorize('jwt', { session: false })
 
 router
   .get('/groups', (req, res, next) => {
