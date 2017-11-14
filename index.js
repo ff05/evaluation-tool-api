@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const { groups, students } = require('./routes')
+const { groups, students, users, sessions } = require('./routes')
 const passport = require('./config/auth')
 
 const PORT = process.env.PORT || 3030
@@ -14,6 +14,8 @@ app
 
   .use(groups)
   .use(students)
+  .use(users)
+  .use(sessions)
 
   .use((req, res, next) => {
      const err = new Error('Not Found')
