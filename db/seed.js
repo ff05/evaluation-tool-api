@@ -7,14 +7,29 @@ const createUrl = (path) => {
   return `${process.env.HOST || `http://localhost:${process.env.PORT || 3030}`}${path}`
 }
 
-const createStudents = (token) => {
-  return students.map((student) => {
+// const createStudents = (token) => {
+//   return students.map((student) => {
+//     return request
+//       .post(createUrl('/students'))
+//       .set('Authorization', `Bearer ${token}`)
+//       .send(student)
+//       .then((res) => {
+//         console.log('Student seeded...', res.body.name)
+//       })
+//       .catch((err) => {
+//         console.error('Error seeding student!', err)
+//       })
+//   })
+// }
+
+const createGroups= (token) => {
+  return groups.map((group) => {
     return request
-      .post(createUrl('/students'))
+      .post(createUrl('/groups'))
       .set('Authorization', `Bearer ${token}`)
-      .send(student)
+      .send(group)
       .then((res) => {
-        console.log('Student seeded...', res.body.name)
+        console.log('Group seeded...', res.body.name)
       })
       .catch((err) => {
         console.error('Error seeding student!', err)
@@ -28,7 +43,7 @@ const authenticate = (email, password) => {
     .send({ email, password })
     .then((res) => {
       console.log('Authenticated!')
-      return createStudents(res.body.token)
+      return createGroups(res.body.token)
     })
     .catch((err) => {
       console.error('Failed to authenticate!', err.message)

@@ -22,7 +22,6 @@ router
   })
   .post('/groups', (req, res, next) => {
     let newGroup = req.body
-    newGroup.authorId = req.account._id
 
     Group.create(newGroup)
       .then((group) => res.json(group))
