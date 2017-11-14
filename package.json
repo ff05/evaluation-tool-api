@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node .",
     "seed": "node db/seed.js",
-    "dev": "nodemon ."
+    "dev": "nodemon --inspect ."
   },
   "dependencies": {
     "body-parser": "^1.18.2",
