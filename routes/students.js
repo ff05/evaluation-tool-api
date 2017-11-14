@@ -24,7 +24,6 @@ router
 
   .post('/students', (req, res, next) => {
     let newStudent = req.body
-    newStudent.authorId = req.account._id
 
     Student.create(newStudent)
       .then((student) => res.json(student))
@@ -50,7 +49,7 @@ router
 
   .delete('/students/:id', (req, res, next) => {
     const id = req.params.id
-    
+
     Student.findByIdAndRemove(id)
       .then(() => {
         res.status = 200

@@ -7,13 +7,28 @@ const createUrl = (path) => {
   return `${process.env.HOST || `http://localhost:${process.env.PORT || 3030}`}${path}`
 }
 
+const createStudents = (token) => {
+  return students.map((student) => {
+    return request
+      .post(createUrl('/students'))
+      .set('Authorization', `Bearer ${token}`)
+      .send(student)
+      .then((res) => {
+        console.log('Student seeded...', res.body.name)
+      })
+      .catch((err) => {
+        console.error('Error seeding student!', err)
+      })
+  })
+}
+
 const authenticate = (email, password) => {
   request
     .post(createUrl('/sessions'))
     .send({ email, password })
     .then((res) => {
       console.log('Authenticated!')
-      return createRecipes(res.body.token)
+      return createStudents(res.body.token)
     })
     .catch((err) => {
       console.error('Failed to authenticate!', err.message)
