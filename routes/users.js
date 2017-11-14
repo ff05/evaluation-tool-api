@@ -9,7 +9,8 @@ router
         return next(err)
       }
 
-      res.status(201).send(user)
+      const { name, email, createdAt, updatedAt } = user
+      res.status(201).json({ name, email, createdAt, updatedAt })
     })
   })
 

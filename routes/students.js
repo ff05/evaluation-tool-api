@@ -50,6 +50,7 @@ router
 
   .delete('/students/:id', (req, res, next) => {
     const id = req.params.id
+    
     Student.findByIdAndRemove(id)
       .then(() => {
         res.status = 200
