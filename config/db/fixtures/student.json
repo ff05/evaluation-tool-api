@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Wayne Louwrems",
+    "picture": "https://avatars0.githubusercontent.com/u/29921542?s=400&v=4",
+    "day": {
+      "eval": "orange",
+      "summary": "great motivation, a few more things"
+    }
+  },
+  {
+    "name": "Maurice Buiten",
+    "picture": "https://avatars0.githubusercontent.com/u/10871077?s=400&v=4",
+    "day": {
+      "eval": "green",
+      "summary": "seems like he knows what he's doing"
+    }
+  },
+  {
+    "name": "Anthony Chamerlin",
+    "picture": "https://avatars2.githubusercontent.com/u/25688811?s=400&v=4",
+    "day": {
+      "eval": "red",
+      "summary": "still got a lot to learn"
+    }
+  },
+]
