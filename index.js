@@ -1,20 +1,35 @@
 const express = require('express')
-const { Group } = require('./models')
+const bodyParser = require('body-parser')
+const { groups, students } = require('./routes')
+const passport = require('./config/auth')
 
 const PORT = process.env.PORT || 3030
 
 let app = express()
 
-app.get('/groups', (req, res, next) => {
-  Group.find()
+app
+  .use(bodyParser.urlencoded({ extended: true }))
+  .use(bodyParser.json())
+  .use(passport.initialize())
 
-    .sort({startDate: -1})
+  .use(groups)
+  .use(students)
 
-    .then((groups) => res.json(groups))
+  .use((req, res, next) => {
+     const err = new Error('Not Found')
+     err.status = 404
+     next(err)
+   })
 
-    .catch((error) => next(error))
-})
+  .use((err, req, res, next) => {
+    res.status(err.status || 500)
+    res.send({
+      message: err.message,
+      // only print full errors in development
+      error: app.get('env') === 'development' ? err : {}
+    })
+  })
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`)
-})
+  .listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`)
+  })

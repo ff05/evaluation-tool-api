@@ -1,6 +1,6 @@
 const mongoose = require('../config/database')
 const { Schema }  = mongoose
-const studentSchema = require('./student')
+const studentSchema = require('mongoose').model('students').schema
 
 const groupSchema = new Schema({
   batch: { type: Number, required: true },
@@ -8,3 +8,5 @@ const groupSchema = new Schema({
   endDate: { type: Date, required: true },
   students: [studentSchema]
 })
+
+module.exports = mongoose.model('groups', groupSchema)
