@@ -9,15 +9,15 @@ const PORT = process.env.PORT || 3030
 let app = express()
 
 app
-  .use(cors)
+  .use(cors())
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
   .use(passport.initialize())
 
-  .use(groups)
-  .use(students)
   .use(users)
   .use(sessions)
+  .use(groups)
+  .use(students)
 
   .use((req, res, next) => {
      const err = new Error('Not Found')
