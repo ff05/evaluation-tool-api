@@ -4,6 +4,7 @@ const { Schema }  = mongoose
 const studentSchema = new Schema({
   name: { type: String, required: true },
   picture: { type: String, required: true },
+  group: { type: Number, required: true },
   days: [{ day: Date, eval: String, summary: String }]
 })
 

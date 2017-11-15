@@ -2,24 +2,11 @@
   {
     "batch" : "1",
     "startDate" : "2017-10-18T16:00:00Z",
-    "endDate" : "2017-12-18T16:00:00Z",
-    "students" : [
-      {
-        "name": "Wayne Louwrens",
-        "picture": "https://avatars0.githubusercontent.com/u/29921542?s=400&v=4",
-        "day": {
-          "eval": "orange",
-          "summary": "great motivation, a few more things"
-        }
-      },
-      {
-        "name": "Maurice Buiten",
-        "picture": "https://avatars0.githubusercontent.com/u/10871077?s=400&v=4",
-        "day": {
-          "eval": "green",
-          "summary": "seems like he knows what he's doing"
-        }
-      }
-    ]
+    "endDate" : "2017-12-18T16:00:00Z"
+  },
+  {
+    "batch" : "2",
+    "startDate" : "2017-11-20",
+    "endDate" : "2018-01-18"
   }
 ]

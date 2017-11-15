@@ -2,25 +2,49 @@
   {
     "name": "Wayne Louwrens",
     "picture": "https://avatars0.githubusercontent.com/u/29921542?s=400&v=4",
-    "day": {
-      "eval": "orange",
-      "summary": "great motivation, a few more things"
-    }
+    "days": [
+      {
+        "day" : "2017-10-18",
+        "eval": "orange",
+        "summary": "great motivation, a few more things"
+      },
+      {
+        "day" : "2017-10-19",
+        "eval": "green",
+        "summary": "scrum went easy on him"
+      }
+    ]
   },
   {
     "name": "Maurice Buiten",
     "picture": "https://avatars0.githubusercontent.com/u/10871077?s=400&v=4",
-    "day": {
-      "eval": "green",
-      "summary": "seems like he knows what he's doing"
-    }
+    "days": [
+      {
+        "day" : "2017-10-18",
+        "eval": "green",
+        "summary": "seems like he knows what he's doing"
+      },
+      {
+        "day" : "2017-10-19",
+        "eval": "red",
+        "summary": "couldn't get AJAX to work"
+      }
+    ]
   },
   {
     "name": "Anthony Chamerlin",
     "picture": "https://avatars2.githubusercontent.com/u/25688811?s=400&v=4",
-    "day": {
-      "eval": "red",
-      "summary": "still got a lot to learn"
-    }
+    "days": [
+      {
+        "day" : "2017-10-18",
+        "eval": "orange",
+        "summary": "still got a lot to learn, good hang of CSS though"
+      },
+      {
+        "day" : "2017-10-19",
+        "eval": "red",
+        "summary": "couldn't get AJAX to work"
+      }
+    ]
   }
 ]
