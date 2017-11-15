@@ -2,6 +2,7 @@
   {
     "name": "Wayne Louwrens",
     "picture": "https://avatars0.githubusercontent.com/u/29921542?s=400&v=4",
+    "group" : "1",
     "days": [
       {
         "day" : "2017-10-18",
@@ -18,6 +19,7 @@
   {
     "name": "Maurice Buiten",
     "picture": "https://avatars0.githubusercontent.com/u/10871077?s=400&v=4",
+    "group" : "1",
     "days": [
       {
         "day" : "2017-10-18",
@@ -34,6 +36,7 @@
   {
     "name": "Anthony Chamerlin",
     "picture": "https://avatars2.githubusercontent.com/u/25688811?s=400&v=4",
+    "group" : "2",
     "days": [
       {
         "day" : "2017-10-18",
