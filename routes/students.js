@@ -1,9 +1,13 @@
-const router = require('express').Router()
+const router = require('express').Router({mergeParams: true})
+const passport = require('../config/auth')
 const { Student } = require('../models')
 
+const authenticate = passport.authorize('jwt', { session: false })
+
 router
-  .get('/students', (req, res, next) => {
-    Student.find()
+  .get('/', (req, res, next) => {
+    const id = req.params.id
+    Student.find({'group': id})
 
       .sort({startDate: -1})
 
