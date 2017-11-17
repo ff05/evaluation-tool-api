@@ -24,7 +24,7 @@ router
       })
       .catch((error) => next(error))
   })
-  .post('/groups', (req, res, next) => {
+  .post('/groups', authenticate, (req, res, next) => {
     let newGroup = req.body
 
     Group.create(newGroup)

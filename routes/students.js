@@ -26,7 +26,7 @@ router
       .catch((error) => next(error))
   })
 
-  .post('/students', (req, res, next) => {
+  .post('/', authenticate, (req, res, next) => {
     let newStudent = req.body
 
     Student.create(newStudent)
@@ -34,7 +34,8 @@ router
       .catch((error) => next(error))
   })
 
-  .patch('/students/:id', (req, res, next) => {
+  .patch('/:id', (req, res, next) => {
+    console.log("hello")
     const id = req.params.id
     const patchForStudent = req.body
 
@@ -51,7 +52,7 @@ router
       .catch((error) => next(error))
   })
 
-  .delete('/students/:id', (req, res, next) => {
+  .delete('/:id', (req, res, next) => {
     const id = req.params.id
 
     Student.findByIdAndRemove(id)

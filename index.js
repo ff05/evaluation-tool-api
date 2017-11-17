@@ -17,6 +17,7 @@ app
   .use(users)
   .use(sessions)
   .use(groups)
+  .use(students)
 
   .use((req, res, next) => {
      const err = new Error('Not Found')
