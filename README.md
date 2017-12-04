@@ -49,7 +49,7 @@ _**Note**: See `db/seed.js` for an example._
 | `POST` | `/groups/:id/students` | Create a student* |
 | `GET` | `/groups/:id/students/:id` | Retrieve a single student by it's `id` |
 | `PATCH` | `/groups/:id/students/:id` | Update a student by it's `id`* |
-| `DELETE` | `/groups/:id/students/:id` | Delete a student by it's `id` |
+| `DELETE` | `/groups/:id/students/:id` | Delete a student by it's `id`* |
 | | | _* Needs authentication_ |
 
 ## Running Locally
