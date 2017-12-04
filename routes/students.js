@@ -35,18 +35,21 @@ router
   })
 
   .patch('/:id', (req, res, next) => {
-    console.log("hello")
     const id = req.params.id
     const patchForStudent = req.body
+
 
     Student.findById(id)
       .then((student) => {
         if (!student) { return next() }
 
-        const updatedStudent = { ...student, ...patchForStudent }
+        const updatedStudent = {
+          ...student,
+          days: [...student.days, patchForStudent]
+        }
 
         Student.findByIdAndUpdate(id, { $set: updatedStudent }, { new: true })
-          .then((student) => res.json(student))
+          .then((updatedStudent) => res.json(updatedStudent))
           .catch((error) => next(error))
       })
       .catch((error) => next(error))
