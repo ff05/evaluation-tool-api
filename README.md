@@ -55,22 +55,6 @@ _**Note**: See `db/seed.js` for an example._
 ## Running Locally
 
 Make sure you have:
- * [MongoDB](https://docs.mongodb.com/), [Yarn](https://yarnpkg.com/en/) and
- * [NodeJS](https://nodejs.org/en/) installed.
-
- * [the frontend](https://github.com/ff05/evaluation-tool) up and running
-
-```bash
-sudo service mongod start
-git clone git@github.com:ff05/evaluation-tool-api.git  
-cd express-groups-api-starter
-yarn install
-yarn start
-```
-
-## Running Locally
-
-Make sure you have:
  * [MongoDB](https://docs.mongodb.com/), [Yarn](https://yarnpkg.com/en/) and [NodeJS](https://nodejs.org/en/) installed.
  * [evaluation-tool](https://github.com/ff05/evaluation-tool) installed
 
