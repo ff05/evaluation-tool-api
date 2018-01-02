@@ -30,7 +30,7 @@ _**Note**: See `db/seed.js` for an example._
 
 ## Groups
 
-**Note:** See `models/group.js` for the Game schema attributes.
+**Note:** See `models/group.js` for the Group schema attributes.
 
 | HTTP Verb | Path | Description |
 |-----------|------|--------------|
@@ -41,7 +41,7 @@ _**Note**: See `db/seed.js` for an example._
 
 ## Students
 
-**Note:** See `models/student.js` for the Game schema attributes.
+**Note:** See `models/student.js` for the Student schema attributes.
 
 | HTTP Verb | Path | Description |
 |-----------|------|--------------|
